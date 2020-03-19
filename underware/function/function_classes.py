@@ -17,8 +17,6 @@ along with Quagmire.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import numpy as np
-import quagmire
-
 
 class LazyEvaluation(object):
 
@@ -48,7 +46,7 @@ class LazyEvaluation(object):
         return
 
     def __repr__(self):
-        return("quagmire.fn: {}".format(self.description))
+        return("uw.fn: {}".format(self.description))
 
     def evaluate(self, *args, **kwargs):
         raise(NotImplementedError)
@@ -63,6 +61,8 @@ class LazyEvaluation(object):
         stored data and don't need to evaluate values. Parameters have Gradients
         that are identically zero ... etc
         """
+
+        ## We need to have a check method in here that is not specific to quagmire as the target
 
         import quagmire
 

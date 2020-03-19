@@ -1,26 +1,18 @@
-from .function_classes import *
-from . import math
-from . import misc
-from . import stats
+"""
+Copyright 2016-2017 Louis Moresi, Ben Mather, Romain Beucher
 
+Underware is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or any later version.
 
-def check_dependency(this_fn, that_fn):
-    """Does this_fn depend upon that_fn ?"""
+Underware is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
 
-    return id(that_fn) in this_fn.dependency_list
+You should have received a copy of the GNU Lesser General Public License
+along with Underware.  If not, see <http://www.gnu.org/licenses/>.
+"""
 
-def check_object_is_a_q_function(fn_object):
-    """Is this object a quagmire LazyEvaluation function ?"""
-
-    return isinstance(fn_object, LazyEvaluation)
-
-def check_object_is_a_q_function_and_raise(fn_object):
-    """If this object is not a quagmire LazyEvaluation function then everything must die !"""
-
-    if not isinstance(fn_object, LazyEvaluation):
-        raise RuntimeError("Expecting a quagmire.function object")
-
-def check_object_is_a_mesh_variable(fn_object):
-	""" Is this object a quagmire MeshVariable or VectorMeshVariable ?"""
-
-	return fn_object.mesh_data
+from . import function
+# from . import scaling

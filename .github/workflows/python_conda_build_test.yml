@@ -34,7 +34,7 @@ jobs:
           conda install -c conda-forge compilers numpy scipy sympy
           conda install -c conda-forge petsc4py petsc mpi4py h5py
           conda install -c conda-forge pint 
-          conda install -c underworldcode stripy 
+          conda install -c underworldcode stripy quagmire # These will not be needed once we get the abstraction right. 
           conda install pytest
 
       - name: Install (self)
